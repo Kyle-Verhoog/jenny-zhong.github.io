@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 
@@ -7,14 +8,11 @@
 
 	}
 	body {
-		padding-top:200px;
-		margin-left:100px;
-		margin-right:100px;
 		font-family: "Gilroy-Light", sans-serif;
+		padding-top:150px;
 		}
 	
 	#about {
-		padding-top: 0px;
 	}
 	.selfie {
 		border-radius:50%;
@@ -30,9 +28,133 @@
 	.thumbnail:hover {
 		opacity: 0.3;
 	}
+	#contact {
+		padding-top:100px;
+	}
 
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
 </style>
+
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Navigation Bar-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-faded fixed-top">
 		<a class="navbar-brand" href="#">Jenny</a>
@@ -60,8 +182,9 @@
 <!-- Body -->
 <body>
 	<!-- About -->
+<div class="container-fluid">
 	<div id="about">
-		<div class="row">
+		<div class="row" style="padding-left:100px; padding-right:100px;">
 			<span class="col-lg-6">
 				<h1 style="vertical-align: middle; margin-top:120px;"> Hi there! </br>I'm Jenny.</h1>
 			</span>
@@ -92,14 +215,37 @@
 						<a href="#" class="thumbnail"><img src="http://bit.ly/2BtXUPP" class= "img-thumbnail img-responsive" alt="project"></a>
 					</div>
 					<div class="col-lg-4">
-					<a href="#" class="thumbnail"><img src="http://bit.ly/2BtXUPP" class= "img-thumbnail img-responsive" alt="project"></a>
+						<a href="#" class="thumbnail"><img src="http://bit.ly/2BtXUPP" class= "img-thumbnail img-responsive" alt="project"></a>
 					</div>
 					<div class="col-lg-4">
 						<a href="#" class="thumbnail"><img src="http://bit.ly/2BtXUPP" class= "img-thumbnail img-responsive" alt="project"></a>
 					</div>
 				</div>
 		</div>
+<!--Contact-->
+<br>
+<br>
+	<div id="contact">
+			<h1 align="center">Contact</h1>
+			<a class="icon-link round facebook fill" href="https://twitter.com/jennayyyz"><i class="fa fa-facebook"></i></a>
+			<a class="icon-link round tumblr fill"><i class="fa fa-tumblr"></i></a>
+			<a class="icon-link round linkedin fill"><i class="fa fa-linkedin"></i></a>
+			<a class="icon-link round twitter fill"><i class="fa fa-twitter"></i></a>
+			<a class="icon-link round google-plus fill"><i class="fa fa-google-plus"></i></a>
+			<a class="icon-link round reddit fill"><i class="fa fa-reddit"></i></a>
+			<a class="icon-link round youtube fill"><i class="fa fa-youtube"></i></a>
+			<a class="icon-link round pinterest fill"><i class="fa fa-pinterest"></i></a>
+			<a class="icon-link round github fill"><i class="fa fa-github"></i></a>
+			<a class="icon-link round envelope fill"><i class="fa fa-envelope"></i></a>
+			<a class="icon-link round soundcloud fill"><i class="fa fa-soundcloud"></i></a>
+				<!--
+				<a href="https://www.instagram.com/jennyzhong_/" class="fa fa-instagram"></a>
+				<a href="https://www.linkedin.com/feed/" class="fa fa-linkedin"></a>-->
+		</div>
+	</div>
+</div>
 </body>
+</meta>
 </html>
 
 <!--
