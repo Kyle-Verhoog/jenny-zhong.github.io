@@ -31,7 +31,7 @@ body {
 
 #projects {
 	font-family: "Quicksand", sans-serif;
-	padding-top:200px;
+	padding-top:100px;
 }
 .thumbnail:hover {
 	opacity: 0.3;
@@ -81,29 +81,41 @@ body {
 
 <script>
 	$(document).ready(function(){
-		$('a[href^="#about"]').on('click', function(e) {e.preventDefault();
+		$('a[href^="#about"]').on('click', function(e) {
+			e.preventDefault();
 
 			var target = this.hash;
 			var $target = $(target);
 
-			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing', function(){
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 900, 'swing', function(){
 				window.location.hash = target;
+			});
 		});
-		$('a[href^="#projects"]').on('click', function(e) {e.preventDefault();
+		$('a[href^="#projects"]').on('click', function(e) {
+			e.preventDefault();
 
 			var target = this.hash;
 			var $target = $(target);
 
-			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing' function(){
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 900, 'swing', function(){
 				window.location.hash = target;
+			});
 		});
-		$('a[href^="#contact"]').on('click', function(e) {e.preventDefault();
+		$('a[href^="#contact"]').on('click', function(e) {
+			e.preventDefault();
 
 			var target = this.hash;
 			var $target = $(target);
 
-			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing' function(){
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 900, 'swing', function(){
 				window.location.hash = target;
+			});
 		});
 	});
 
