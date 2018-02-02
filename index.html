@@ -1,14 +1,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:bold" rel="stylesheet">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <style>
-
 .nav-link {
 	font-size:20px !important;
-
+}
+.nav-item {
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 body {
@@ -77,10 +79,37 @@ body {
 
 </style>
 
+<script>
+	$(document).ready(function(){
+		$('a[href^="#about"]').on('click', function(e) {e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing');
+		});
+		$('a[href^="#projects"]').on('click', function(e) {e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing');
+		});
+		$('a[href^="#contact"]').on('click', function(e) {e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing');
+		});
+	});
+
+</script>
+
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Navigation Bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-faded fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-faded fixed-top" style="background-color:#323232 !important;">
 	<a class="navbar-brand" href="#" style="font-family: quicksand, sans-serif">Jenny</a>
 	<button class="navbar-toggler" type="button" data-toggle="collaspe" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -110,7 +139,8 @@ body {
 			<div id="about">
 				<div class="row" style="padding-left:100px; padding-right:100px;">
 					<span class="col-lg-6">
-						<h1 style="vertical-align: middle; margin-top:120px;">Hi there! </br>I'm Jenny.</h1>
+						<h1 style="vertical-align: middle; margin-top:120px;">Hi there! I'm Jenny. <br> Civil Engineering Student,</h1>
+						<h4>Dog Lover, Traveller and Foodie</h4>
 					</span>
 					<span class="col-lg-6">
 						<img class="selfie" src="https://i.imgur.com/Mh7HJcZ_d.jpg?maxwidth=640&shape=thumb&fidelity=medium" alt="Me!">
@@ -119,7 +149,7 @@ body {
 
 				<!--Projects-->
 				<div id="projects">
-					<h1 align="center">Projects</h1>
+					<h1 align="center">PROJECTS</h1>
 					<br>
 					<div class="row">
 						<div class="col-lg-4">
@@ -150,7 +180,7 @@ body {
 				<br>
 				<br>
 				<div id="contact">
-					<h1 align="center">Contact</h1>
+					<h1 align="center">CONTACT</h1>
 					<br>
 					<div align="center">
 						<a class="icon-link round twitter fill" href="https://twitter.com/jennayyyz"><i class="fa fa-twitter"></i></a>
