@@ -8,9 +8,22 @@
 .nav-link {
 	font-size:20px !important;
 }
+
 .nav-item {
 	margin-right: 10px;
 	margin-left: 10px;
+}
+
+.nav-link {
+	color: rgba(255,255,255,.5) !important; /* fix me, very bad hack */
+}
+
+.nav-link:hover {
+	color: white !important; /* fix me, very bad hack */
+}
+
+.nav-link-fake-hover {
+	color: white !important; /* fix me, very bad hack */
 }
 
 body {
@@ -21,6 +34,7 @@ body {
 	padding-top:200px;
 	font-family:"Quicksand", sans-serif;
 }
+
 .selfie {
 	border-radius:50%;
 	height:400px;
@@ -36,12 +50,13 @@ body {
 .thumbnail:hover {
 	opacity: 0.3;
 }
+
 #contact {
 	padding-top:100px;
-	padding-bottom: 50px;
+	padding-bottom: 50;
 }
 
-.fa { 
+.fa {
 	padding: 20px;
 	font-size: 30px;
 	text-align: center;
@@ -60,12 +75,10 @@ body {
 	color: white;
 }
 
-
 .fa-linkedin {
 	background: #007bb5;
 	color: white;
 }
-
 
 .fa-instagram {
 	background: #125688;
@@ -117,6 +130,32 @@ body {
 				window.location.hash = target;
 			});
 		});
+
+		$(window).on("scroll", function() {
+			var scrollPosition = scrollY || pageYOffset;
+			var buffer = 20;
+			var windowScrollTop = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			var documentHeight = $(document).height();
+
+			if (windowScrollTop + windowHeight - 1000 >= documentHeight) {
+				$('#contactLink').addClass('nav-link-fake-hover');
+				$('#aboutLink').removeClass('nav-link-fake-hover');
+				$('#projectLink').removeClass('nav-link-fake-hover');
+			}
+			else if (scrollPosition <= $('#projects').position().top - buffer) {
+				$('#aboutLink').addClass('nav-link-fake-hover');
+				$('#projectLink').removeClass('nav-link-fake-hover');
+				$('#contactLink').removeClass('nav-link-fake-hover');
+			}
+			else if (scrollPosition <= $('#contact').position().top - buffer) {
+				$('#projectLink').addClass('nav-link-fake-hover');
+				$('#aboutLink').removeClass('nav-link-fake-hover');
+				$('#contactLink').removeClass('nav-link-fake-hover');
+			}
+		});
+
+		$('#aboutLink').addClass('nav-link-fake-hover');
 	});
 
 </script>
@@ -135,13 +174,13 @@ body {
 		</ul>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" href="#about" style="font-family: quicksand, sans-serif">About</a><span class="sr-only">(current)
+				<a id="aboutLink" class="nav-link" href="#about" style="font-family: quicksand, sans-serif">About</a><span class="sr-only">(current)
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#projects" style="font-family: quicksand, sans-serif">Projects</a>
+					<a id="projectLink" class="nav-link" href="#projects" style="font-family: quicksand, sans-serif">Projects</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#contact" style="font-family: quicksand, sans-serif">Contact</a>
+					<a id="contactLink" class="nav-link" href="#contact" style="font-family: quicksand, sans-serif">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -226,7 +265,7 @@ body {
 				<li><a href="#">CONTACT</a></li>
 			</ul>
 		</div>
-	</nav> 
+	</nav>
 </meta>
 </html>
 
@@ -241,7 +280,7 @@ body {
  					<a href="#contact">CONTACT</a>
  					<a href="#creations">CREATIONS</a>
  					<a href="#about">ABOUT</a>
- 			
+
  				</div>
   			<div>
 
@@ -251,6 +290,3 @@ body {
 	</div>
 </meta>
 -->
-
-
-
